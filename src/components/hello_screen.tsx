@@ -1,33 +1,12 @@
 import React from "react";
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-import { PROFILE } from "./constants";
-import gitIcon from "./assets/git.png";
-import twitterIcon from "./assets/twitter.png";
-import linkedinIcon from "./assets/linkedin.png";
-import SnakeGame from "./components/SnakeGame";
-import HelloScreen from "./components/hello_screen";
+import { PROFILE } from "../constants";
+import gitIcon from "../assets/git.png";
+import twitterIcon from "../assets/twitter.png";
+import linkedinIcon from "../assets/linkedin.png";
 
-function App() {
-  const [count, setCount] = useState(0)
-
+const HelloScreen: React.FC = () => {
   return (
-    <div className="fixed inset-0 w-full h-full bg-slate-900 overflow-hidden flex flex-col">
-      {/* Teal gradient (top left of game panel) */}
-      <div className="absolute z-0 pointer-events-none" style={{
-        left: '50%', top: '15%', width: '500px', height: '400px',
-        background: 'radial-gradient(ellipse 60% 60% at 50% 40%, #38bdf8cc 0%, transparent 80%)',
-        filter: 'blur(15px)',
-      }} />
-      {/* Indigo gradient (bottom right of game panel) */}
-      <div className="absolute z-0 pointer-events-none" style={{
-        left: '55%', top: '30%', width: '600px', height: '400px',
-        background: 'radial-gradient(ellipse 60% 60% at 60% 60%, #6366f1b3 0%, transparent 80%)',
-        filter: 'blur(15px)',
-      }} />
-      {/* Removed background gradient overlay */}
+    <>
       {/* Header Navigation Bar */}
       <header className="relative w-full z-10">
         <div className="flex items-stretch border-b border-slate-800 w-full h-16 bg-slate-900/80 backdrop-blur-sm">
@@ -41,11 +20,11 @@ function App() {
               <a href="#hello" className="px-6 h-full flex items-center text-indigo-200 hover:text-orange-400 font-mono border-b-2 border-orange-400 shadow-[0_2px_8px_#fb923c40]" style={{color: '#fb923c'}}>
                 _hello
               </a>
-              <div className="w-px bg-slate-800 mx-2 h-full self-stretch" style={{minHeight: '100%'}}></div>
+              <div className="w-px bg-slate-800 h-8 self-center" />
               <a href="#about-me" className="px-6 h-full flex items-center text-indigo-200 hover:text-orange-400 font-mono">
                 _about-me
               </a>
-              <div className="w-px bg-slate-800 mx-2 h-full self-stretch" style={{minHeight: '100%'}}></div>
+              <div className="w-px bg-slate-800 h-8 self-center" />
               <a href="#projects" className="px-6 h-full flex items-center text-indigo-200 hover:text-orange-400 font-mono">
                 _projects
               </a>
@@ -56,31 +35,27 @@ function App() {
           <div className="flex-1" />
           {/* Right nav option */}
           <nav className="flex items-center h-full">
-          <div className="w-px bg-slate-800 mx-2 h-full self-stretch" style={{minHeight: '100%'}}></div>
+            <div className="w-px bg-slate-800 h-8 self-center mr-2" />
             <a href="#contact-me" className="px-8 h-full flex items-center text-indigo-200 hover:text-orange-400 font-mono">
               _contact-me
             </a>
           </nav>
         </div>
       </header>
-      {/* Main Content */}
+      {/* Main Content (left panel only) */}
       <main className="flex-1 flex flex-row items-center justify-center w-full z-10 gap-8"> 
         {/* Left: Intro */}
         <div className="flex-1 flex flex-col justify-center items-start max-w-[700px] pl-8">
           <p className="text-slate-300 text-base mb-4 tracking-wide font-mono">Hi all. I am</p>
           <h1 className="text-[64px] font-bold mb-2 tracking-wide text-slate-100 font-mono leading-[1.1] drop-shadow-[0_2px_8px_#a3bffa40]">{PROFILE.name}</h1>
-          <h2 className="text-2xl font-semibold mb-8 font-mono text-indigo-600" style={{textShadow: '0 2px 8px #818cf840'}}>&gt; {PROFILE.role}</h2>
+          <h2 className="text-2xl font-semibold mb-8 font-mono text-indigo-400" style={{textShadow: '0 2px 8px #818cf840'}}>&gt; {PROFILE.role}</h2>
           <pre className="text-slate-300 font-mono text-base mb-4 bg-transparent p-0 leading-6">{`// complete the game to continue\n// find my profile on Github:`}</pre>
           <div className="bg-transparent rounded px-0 py-0 font-mono text-lg">
-            <span className="text-indigo-700">const </span>
+            <span className="text-teal-300">const </span>
             <span className="text-teal-400">githubLink</span>
             <span className="text-slate-300"> = </span>
-            <a href={PROFILE.github} className="text-red-400 underline">"{PROFILE.github}"</a>
+            <a href={PROFILE.github} className="text-orange-400 underline">"{PROFILE.github}"</a>
           </div>
-        </div>
-        {/* Right: Game Placeholder */}
-        <div className="flex-1 flex justify-center items-center max-w-[600px] pr-8">
-          <SnakeGame />
         </div>
       </main>
       {/* Footer */}
@@ -98,8 +73,8 @@ function App() {
           <img src={gitIcon} alt="git" className="w-5 h-5 ml-2" />
         </div>
       </footer>
-    </div>
-  )
-}
+    </>
+  );
+};
 
-export default App
+export default HelloScreen; 
