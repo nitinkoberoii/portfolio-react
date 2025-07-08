@@ -1,8 +1,8 @@
 import React from "react";
-import { PROFILE } from "../constants";
-import gitIcon from "../assets/git.png";
-import twitterIcon from "../assets/twitter.png";
-import linkedinIcon from "../assets/linkedin.png";
+import { PROFILE } from "../../constants";
+import gitIcon from "../../assets/git.png";
+import twitterIcon from "../../assets/twitter.png";
+import linkedinIcon from "../../assets/linkedin.png";
 
 const HelloScreen: React.FC = () => {
   return (

@@ -7,8 +7,8 @@ import { PROFILE } from "./constants";
 import gitIcon from "./assets/git.png";
 import twitterIcon from "./assets/twitter.png";
 import linkedinIcon from "./assets/linkedin.png";
-import SnakeGame from "./components/SnakeGame";
-import HelloScreen from "./components/hello_screen";
+import CodeSnippetPanel from "./components/hello_screen/CodeSnippetPanel";
+import HelloScreen from "./components/hello_screen/hello_screen";
 
 function App() {
   const [count, setCount] = useState(0)
@@ -80,11 +80,11 @@ function App() {
         </div>
         {/* Right: Game Placeholder */}
         <div className="flex-1 flex justify-center items-center max-w-[600px] pr-8">
-          <SnakeGame />
+          <CodeSnippetPanel />
         </div>
       </main>
       {/* Footer */}
-      <footer className="flex justify-between items-center px-16 py-3 border-t border-slate-800 text-indigo-200 text-base bg-slate-900/80 backdrop-blur-sm w-full z-10 font-mono">
+      <footer className="fixed bottom-0 left-0 w-full flex justify-between items-center px-16 py-3 border-t border-slate-800 text-indigo-200 text-base bg-slate-900/80 backdrop-blur-sm z-50 font-mono">
         <div className="flex items-center gap-0">
           <span className="text-base font-mono px-2" style={{fontWeight: 500}}>find me in:</span>
           <div className="w-px bg-slate-800 h-6 self-center mx-2" />
