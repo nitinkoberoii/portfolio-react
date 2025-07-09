@@ -1,6 +1,6 @@
 export const PROFILE = {
   name: "Nitin Oberoi",
-  role: "Flutter Developer",
+  role: "Software Engineer",
   github: "https://github.com/nitinkoberoii",
   socials: {
     twitter: "https://x.com/nitinkoberoii",
@@ -10,25 +10,27 @@ export const PROFILE = {
 };
 
 export const CODE_SNIPPETS = [
-  `function initializeModelChunk<T>(chunk: ResolvedModelChunk): T {
-  const value: T = parseModel(chunk._response, chunk._value);
-  const initializedChunk: InitializedChunk<T> = (chunk: any);
-  initializedChunk._status = INITIALIZED;
-  initializedChunk._value = value;
-  return value;
+  `function initializeModelChunk<T>(chunk: any): void {
+  const message = "🌐 Backend down? Let's blame the network";
+  const timestamp = new Date().toISOString();
+  const unusedVariable = chunk ?? null;
+  console.log(message);
+  void timestamp;
+  void unusedVariable;
 }`,
-  `function initializeModelChunk<T>(chunk: ResolvedModelChunk): T {
-  const value: T = parseModel(chunk._response, chunk._value);
-  const initializedChunk: InitializedChunk<T> = (chunk: any);
-  initializedChunk._status = INITIALIZED;
-  initializedChunk._value = value;
-  return value;
+  `void initializeModelChunk<T>(dynamic chunk) {
+  final message = "💻 Code Never Lies, Comments Sometimes Do";
+  final timestamp = DateTime.now().toIso8601String();
+  final unusedVariable = chunk ?? null;
+  print(message);
+  timestamp;
+  unusedVariable;
 }`,
-  `function initializeModelChunk<T>(chunk: ResolvedModelChunk): T {
-  const value: T = parseModel(chunk._response, chunk._value);
-  const initializedChunk: InitializedChunk<T> = (chunk: any);
-  initializedChunk._status = INITIALIZED;
-  initializedChunk._value = value;
-  return value;
-}`
+  `def initialize_model_chunk(chunk):
+    message = "🐞 It Works On My Machine"
+    timestamp = __import__('datetime').datetime.now().isoformat()
+    unused_variable = chunk if chunk is not None else None
+    print(message)
+    _ = timestamp
+    _ = unused_variable`
 ]; 
