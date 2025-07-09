@@ -2,7 +2,8 @@
 
 A modern, interactive portfolio built with React, TypeScript, and Vite.
 
-![Portfolio Screenshot](./screenshot.png)
+![image](https://github.com/user-attachments/assets/a468cfd6-b012-466a-8a97-a56330c8d26f)
+
 
 ## ✨ Features
 
