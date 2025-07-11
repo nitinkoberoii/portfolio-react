@@ -8,7 +8,7 @@ const MainContent: React.FC<{ selectedId: string }> = ({ selectedId }) => {
   return (
     <div className="p-6 h-full overflow-y-auto">
       {isCode ? (
-        <pre className="bg-slate-900 text-slate-100 rounded-lg p-4 text-xs leading-6 font-mono whitespace-pre-wrap border border-slate-800 shadow-inner">
+        <pre className="text-slate-100 text-xs leading-6 font-mono whitespace-pre-wrap">
           {content}
         </pre>
       ) : (

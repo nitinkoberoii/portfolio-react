@@ -94,11 +94,11 @@ function App() {
                 <span className="text-slate-300"> = </span>
                 <a href={PROFILE.github} className="text-red-400 underline">"{PROFILE.github}"</a>
               </div>
-            </div>
+      </div>
             {/* Right: Game Placeholder */}
             <div className="flex-1 flex justify-center items-center max-w-[600px] pr-8">
               <CodeSnippetPanel />
-            </div>
+      </div>
           </>
         )}
         {currentScreen === 'about-me' && <AboutMeScreen />}

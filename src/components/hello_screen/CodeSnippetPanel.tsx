@@ -82,35 +82,35 @@ const CodeSnippetPanel: React.FC = () => {
         style={scrollStyle}
       >
         {windowSnippets.map(({ code, idx }, i) => (
-          <div
+        <div
             key={idx + '-' + i}
             className={`relative w-full max-w-[520px] rounded-2xl border border-slate-700 shadow-xl overflow-hidden transition-all duration-700 ${
               i === focusIdx ? "opacity-100 z-10 blur-0" : "opacity-40 blur-[1.5px] z-0"
-            }`}
-            style={{
-              background: SNIPPET_BG,
+          }`}
+          style={{
+            background: SNIPPET_BG,
               boxShadow: i === focusIdx ? "0 4px 32px 0 #0f172acc" : "0 2px 16px 0 #0f172a80",
               minHeight: 140,
               transition: `all ${ANIMATION_DURATION}ms cubic-bezier(0.4,0,0.2,1)`
-            }}
-          >
-            <div className="px-6 py-6">
-              <Highlight theme={themes.duotoneDark} code={code} language="typescript">
-                {({ className, style, tokens, getLineProps, getTokenProps }) => (
-                  <pre className={"text-xs font-mono leading-6 bg-transparent p-0 m-0 text-left " + className} style={{ ...style, background: "none", boxShadow: "none" }}>
-                    {tokens.map((line, i) => (
-                      <div key={i} {...getLineProps({ line, key: i })}>
-                        {line.map((token, key) => (
-                          <span key={key} {...getTokenProps({ token, key })} />
-                        ))}
-                      </div>
-                    ))}
-                  </pre>
-                )}
-              </Highlight>
-            </div>
+          }}
+        >
+          <div className="px-6 py-6">
+            <Highlight theme={themes.duotoneDark} code={code} language="typescript">
+              {({ className, style, tokens, getLineProps, getTokenProps }) => (
+                <pre className={"text-xs font-mono leading-6 bg-transparent p-0 m-0 text-left " + className} style={{ ...style, background: "none", boxShadow: "none" }}>
+                  {tokens.map((line, i) => (
+                    <div key={i} {...getLineProps({ line, key: i })}>
+                      {line.map((token, key) => (
+                        <span key={key} {...getTokenProps({ token, key })} />
+                      ))}
+                    </div>
+                  ))}
+                </pre>
+              )}
+            </Highlight>
           </div>
-        ))}
+        </div>
+      ))}
       </div>
     </div>
   );

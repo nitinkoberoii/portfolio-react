@@ -25,8 +25,8 @@ export const ABOUT_ME_SIDEBAR = [
     label: 'contacts',
     icon: 'mail',
     children: [
-      { id: 'email', label: 'user@gmail.com', icon: 'mail', type: 'leaf' },
-      { id: 'phone', label: '+3598246359', icon: 'phone', type: 'leaf' },
+      { id: 'email', label: 'nitinkoberoii@gmail.com', icon: 'mail', type: 'leaf' },
+      { id: 'phone', label: '+91-7302825162', icon: 'phone', type: 'leaf' },
     ],
   },
   {
