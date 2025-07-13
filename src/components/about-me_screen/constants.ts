@@ -52,12 +52,33 @@ export const ABOUT_ME_SIDEBAR = [
   },
 ];
 
+export const ABOUT_ME_EXPERIENCE = [
+  {
+    role: 'Full Stack Intern',
+    company: 'CodexVeer',
+    duration: 'May 2025 - July 2025',
+    bullets: [
+      'Designed and deployed RESTful APIs using Node.js and MongoDB, achieving 40% faster data transactions and handling over 1000 concurrent client requests with zero downtime.',
+      'Collaborated on building 15+ Flutter UI components, ensuring smooth integration with backend services and improving user experience across Android and web platforms.'
+    ]
+  },
+  {
+    role: 'Flutter Developer Intern',
+    company: 'Thesis Ace Writers',
+    duration: 'September 2024 - November 2024',
+    bullets: [
+      'Redesigned the user interface for over 20 screens in an educational Flutter application, enhancing navigation and accessibility, which contributed to a 15% increase in user activity during testing.',
+      'Integrated 3 critical APIs to support interactive features, contributing to a 20% improvement in app responsiveness, while collaborating with team members to ensure reliable performance.'
+    ]
+  }
+];
+
 export const ABOUT_ME_CONTENT = {
   bio: `/**\n * About me\n * I have 5 years of experience in web development lorem ipsum dolor sit amet,\n * consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore\n * magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris\n * nisi ut aliquip ex ea commodo consequat.\n * Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat\n * nulla pariatur. Excepteur sint occaecat cupidatat non proident,\n * officia deserunt mollit anim id est laborum.\n */`,
   interests: `- Coding\n- UI/UX Design\n- Open Source\n- Teaching\n- Blogging`,
   'high-school': `**High School:**\nSpringfield High School\n2010-2014`,
   university: `**University:**\nBSc Computer Science,\nMIT, 2014-2018`,
-  experience: `- Frontend Developer at TechCorp (2018-2021)\n- Senior Developer at Webify (2021-Present)`,
+  experience: ABOUT_ME_EXPERIENCE,
   skills: `- React\n- TypeScript\n- Node.js\n- CSS/SCSS\n- GraphQL`,
   certificates: `- AWS Certified Developer\n- Google UX Design Certificate`,
   music: `- Guitar\n- Piano\n- Synthwave`,
