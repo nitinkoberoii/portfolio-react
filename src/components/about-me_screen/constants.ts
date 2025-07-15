@@ -63,6 +63,15 @@ export const ABOUT_ME_EXPERIENCE = [
     ]
   },
   {
+    role: 'Backend Developer [Freelancer]',
+    company: 'Medhwan EduTech',
+    duration: 'May 2025 - June 2025',
+    bullets: [
+      'Designed scalable backend architecture and developed RESTful APIs for Prajawal, an educational platform supporting 10th-grade Gujarat Board students.',
+      'Integrated database schemas and optimized server-client communication, ensuring reliable and high-performance backend operations under tight deadlines.'
+    ]
+  },
+  {
     role: 'Flutter Developer Intern',
     company: 'Thesis Ace Writers',
     duration: 'September 2024 - November 2024',

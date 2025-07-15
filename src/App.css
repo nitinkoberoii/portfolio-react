@@ -40,3 +40,23 @@
 .read-the-docs {
   color: #888;
 }
+
+/* Hide scrollbar by default, show on hover */
+.scrollbar-hide {
+  scrollbar-width: thin; /* For Firefox */
+  scrollbar-color: #23283a #202432; /* For Firefox */
+}
+.scrollbar-hide::-webkit-scrollbar {
+  width: 8px;
+  background: transparent;
+}
+.scrollbar-hide:hover::-webkit-scrollbar {
+  background: #23283a;
+}
+.scrollbar-hide::-webkit-scrollbar-thumb {
+  background: transparent;
+  border-radius: 8px;
+}
+.scrollbar-hide:hover::-webkit-scrollbar-thumb {
+  background: #444c5e;
+}

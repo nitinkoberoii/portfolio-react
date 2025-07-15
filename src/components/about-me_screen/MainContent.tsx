@@ -1,5 +1,6 @@
 import React from 'react';
 import { ABOUT_ME_CONTENT, ABOUT_ME_EXPERIENCE } from './constants';
+import { skillCategories } from './skillsData';
 
 const ExperienceBox: React.FC<{
   role: string;
@@ -21,14 +22,39 @@ const ExperienceBox: React.FC<{
   </div>
 );
 
+const SkillsBox: React.FC<{ name: string; images: { src: string; alt: string }[] }> = ({ name, images }) => (
+  <div className="bg-slate-900 rounded-xl border border-slate-800 shadow-lg p-5 mb-6 w-full">
+    <div className="font-bold text-base text-slate-100 mb-3 text-left">{name}</div>
+    <div className="flex flex-wrap gap-4">
+      {images.map((img, idx) => (
+        <div key={idx} className="flex flex-col items-center w-20">
+          <img src={img.src} alt={img.alt} className="h-12 w-12 object-contain mb-1" />
+          <span className="text-xs text-slate-300 text-center mt-1">{img.alt}</span>
+        </div>
+      ))}
+    </div>
+  </div>
+);
+
 const MainContent: React.FC<{ selectedId: string }> = ({ selectedId }) => {
   const content = (ABOUT_ME_CONTENT as Record<string, any>)[selectedId] || 'Select an item from the sidebar.';
   if (selectedId === 'experience' && Array.isArray(ABOUT_ME_EXPERIENCE)) {
     return (
       <div className="p-6 h-full w-full flex flex-col items-center">
-        <div className="w-full max-w-2xl h-full overflow-y-auto pr-2" style={{ maxHeight: '100%' }}>
+        <div className="w-full max-w-2xl h-full overflow-y-auto pr-2 scrollbar-hide" style={{ maxHeight: '100%' }}>
           {ABOUT_ME_EXPERIENCE.map((exp, idx) => (
             <ExperienceBox key={idx} {...exp} />
+          ))}
+        </div>
+      </div>
+    );
+  }
+  if (selectedId === 'skills') {
+    return (
+      <div className="p-6 h-full w-full flex flex-col items-center">
+        <div className="w-full max-w-2xl h-full overflow-y-auto pr-2 scrollbar-hide" style={{ maxHeight: '100%' }}>
+          {skillCategories.map((cat, idx) => (
+            <SkillsBox key={idx} name={cat.name} images={cat.images} />
           ))}
         </div>
       </div>
