@@ -1,8 +1,9 @@
 import React from 'react';
-import { ABOUT_ME_CONTENT, ABOUT_ME_EXPERIENCE } from './constants';
-import { skillCategories } from './skillsData';
-import { CERTIFICATES } from './certificatesData';
-import type { CertificateData } from './certificatesData';
+import { ABOUT_ME_CONTENT } from './constants';
+import { ABOUT_ME_EXPERIENCE } from './professional-info/experienceData';
+import { skillCategories } from './professional-info/skillsData';
+import { CERTIFICATES } from './professional-info/certificatesData';
+import type { CertificateData } from './professional-info/certificatesData';
 
 const ExperienceBox: React.FC<{
   role: string;

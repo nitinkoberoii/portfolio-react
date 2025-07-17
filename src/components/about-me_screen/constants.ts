@@ -52,50 +52,20 @@ export const ABOUT_ME_SIDEBAR = [
   },
 ];
 
-export const ABOUT_ME_EXPERIENCE = [
-  {
-    role: 'Full Stack Intern',
-    company: 'CodexVeer',
-    duration: 'May 2025 - July 2025',
-    bullets: [
-      'Designed and deployed RESTful APIs using Node.js and MongoDB, achieving 40% faster data transactions and handling over 1000 concurrent client requests with zero downtime.',
-      'Collaborated on building 15+ Flutter UI components, ensuring smooth integration with backend services and improving user experience across Android and web platforms.'
-    ]
-  },
-  {
-    role: 'Backend Developer [Freelancer]',
-    company: 'Medhwan EduTech',
-    duration: 'May 2025 - June 2025',
-    bullets: [
-      'Designed scalable backend architecture and developed RESTful APIs for Prajawal, an educational platform supporting 10th-grade Gujarat Board students.',
-      'Integrated database schemas and optimized server-client communication, ensuring reliable and high-performance backend operations under tight deadlines.'
-    ]
-  },
-  {
-    role: 'Flutter Developer Intern',
-    company: 'Thesis Ace Writers',
-    duration: 'September 2024 - November 2024',
-    bullets: [
-      'Redesigned the user interface for over 20 screens in an educational Flutter application, enhancing navigation and accessibility, which contributed to a 15% increase in user activity during testing.',
-      'Integrated 3 critical APIs to support interactive features, contributing to a 20% improvement in app responsiveness, while collaborating with team members to ensure reliable performance.'
-    ]
-  }
-];
-
 export const ABOUT_ME_CONTENT = {
   bio: `/**\n * About me\n * I have 5 years of experience in web development lorem ipsum dolor sit amet,\n * consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore\n * magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris\n * nisi ut aliquip ex ea commodo consequat.\n * Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat\n * nulla pariatur. Excepteur sint occaecat cupidatat non proident,\n * officia deserunt mollit anim id est laborum.\n */`,
   interests: `- Coding\n- UI/UX Design\n- Open Source\n- Teaching\n- Blogging`,
   'high-school': `**High School:**\nSpringfield High School\n2010-2014`,
   university: `**University:**\nBSc Computer Science,\nMIT, 2014-2018`,
-  experience: ABOUT_ME_EXPERIENCE,
+  experience: [], // This will be populated by experienceData.ts
   skills: `- React\n- TypeScript\n- Node.js\n- CSS/SCSS\n- GraphQL`,
   certificates: `- AWS Certified Developer\n- Google UX Design Certificate`,
   music: `- Guitar\n- Piano\n- Synthwave`,
   books: `- Clean Code\n- The Pragmatic Programmer\n- Atomic Habits`,
   hiking: `Favorite trails: Appalachian, Pacific Crest`,
   games: `- Chess\n- Portal 2\n- Celeste`,
-  email: `user@gmail.com`,
-  phone: `+3598246359`,
+  email: `nitinkoberoii@gmail.com`,
+  phone: `+91-7302825162`,
 };
 
 export const ABOUT_ME_SNIPPETS = [
