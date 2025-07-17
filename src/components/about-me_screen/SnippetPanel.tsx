@@ -4,9 +4,10 @@ import { Highlight, themes } from 'prism-react-renderer';
 
 export interface SnippetPanelProps {
   pdfPath?: string | null;
+  selectedId?: string;
 }
 
-const SnippetPanel: React.FC<SnippetPanelProps> = ({ pdfPath }) => {
+const SnippetPanel: React.FC<SnippetPanelProps> = ({ pdfPath, selectedId }) => {
   const [openDetails, setOpenDetails] = useState<{ [id: string]: boolean }>({});
   const [stars, setStars] = useState<{ [id: string]: number }>(
     Object.fromEntries(ABOUT_ME_SNIPPETS.map(s => [s.id, s.stars]))
@@ -31,6 +32,14 @@ const SnippetPanel: React.FC<SnippetPanelProps> = ({ pdfPath }) => {
             style={{ minHeight: '500px' }}
           />
         </div>
+      </div>
+    );
+  }
+
+  if (selectedId === 'certificates') {
+    return (
+      <div className="flex items-center justify-center w-full h-full">
+        <span className="text-slate-400 text-lg text-center">Click the Preview button to see the certificates.</span>
       </div>
     );
   }

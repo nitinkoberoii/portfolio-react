@@ -21,7 +21,7 @@ const AboutMeScreen: React.FC = () => {
           <MainContent selectedId={selectedId} setPdfPath={setPdfPath} />
         </div>
         <div className="w-[550px] bg-[#181c24]"> {/* right panel bg matches navbar */}
-          <SnippetPanel pdfPath={pdfPath} />
+          <SnippetPanel pdfPath={pdfPath} selectedId={selectedId} />
         </div>
       </div>
     </div>
